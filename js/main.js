@@ -6,7 +6,15 @@ const links = [
     }, 
     {
         label: "Week1 exercise",
-        url: "week1/index.html"
+        url: "week1/exercise.html"
+      },
+      {
+        label: "Week2 notes",
+        url: "week2/note.html"
+      },
+      {
+        label: "Week2 exercise",
+        url: "week2/exercise.html"
       }
   ]
   var linksHtml = "";
