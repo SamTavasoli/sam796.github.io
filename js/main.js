@@ -15,6 +15,10 @@ const links = [
       {
         label: "Week2 exercise",
         url: "week2/exercise.html"
+      },
+      {
+        label: "Week2 Team Activiy",
+        url: "week2/ta.html"
       }
   ]
   var linksHtml = "";
