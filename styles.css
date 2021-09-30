@@ -1,4 +1,5 @@
 body {
+  display: inline-block;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -6,4 +7,86 @@ body {
 h1 {
   background-color: antiquewhite;
   padding: 1em;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  border-radius: 20px !important;
+  margin: 10px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  align-items: center;
+  display: flex;
+  background-color: #FFD700;
+  color: black;
+}
+
+.flip-card-front h1{
+  background-color: #FFD700 !important;
+}
+
+/* Style the back side */
+.flip-card-back {
+  padding-top: 30px;
+  background-color: #FFD700;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back a{
+  border-radius: 10px;
+  background-color: #FFD700 !important;
+  margin:auto;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;  
+  background-color: rgba(76, 175, 80, 0.4) !important;
+}
+
+.flip-card-back a:hover{
+  color: #555555;
+}
+
+
+.block{
+  margin: 30px;
+  font-size: 2rem;
+}
+
+#fHeader {
+  text-align: center;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gold;
+  background-color: black !important;
 }

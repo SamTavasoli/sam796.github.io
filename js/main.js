@@ -1,28 +1,26 @@
 var nav = document.getElementById("nav");
-const links = [
-    {
-      label: "Week1 notes",
-      url: "week1/note.html"
-    }, 
-    {
-        label: "Week1 exercise",
-        url: "week1/exercise.html"
-      },
-      {
-        label: "Week2 notes",
-        url: "week2/note.html"
-      },
-      {
-        label: "Week2 exercise",
-        url: "week2/exercise.html"
-      },
-      {
-        label: "Week2 Team Activiy",
-        url: "week2/ta.html"
-      }
-  ]
-  var linksHtml = "";
-  for (link of links) {
-   linksHtml += "<li><a href='"+ link["url"] + "'>" + link["label"] + "</a></li>";
+
+var filetype = ["note", "exercise", "ta"];
+
+var linksHtml = "<div class='container'> <div class='row'>";
+for (var i = 1; i < 15; i++){
+  
+  linksHtml += `
+  <div class="flip-card .col-6 .col-md-4 .col-sm-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Week`+ i +`</h1>
+    </div>
+    <div class="flip-card-back">`;
+
+  for (var j = 0; j < filetype.length; j++){
+    var label = "Week"+ i + " " + filetype[j];
+    var url = "week" + i + "/" + filetype[j] + ".html";
+
+    linksHtml += '<a href="'+ url +'">'+ label +'</a><br>';
   }
+  linksHtml += "</div></div></div>"
+}
+linksHtml += "</div></div>"
+ 
   nav.innerHTML = linksHtml;
