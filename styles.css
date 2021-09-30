@@ -89,10 +89,35 @@ h1 {
   font-size: 2rem;
 }
 
-#fHeader {
+.fHeader {
   text-align: center;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
   color: gold;
   background-color: black !important;
 }
+
+.titlerow{
+  display:inline-block;
+  width:100%;
+  overflow: hidden;
+}
+
+.logo {
+  float:left; 
+  padding:10px;
+}
+
+footer {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+body {
+  background-color: rgb(179, 103, 41);
+}
+
+
+
+
+
