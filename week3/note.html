@@ -4,36 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week2 note2</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>week3 note3</title>
 </head>
-<body>
-    <h1>Note for week 2</h1>
-    <p>
-        All the note have been submitted by using the Microsoft word in I-learn
-    </p>
+<body id="week3">
+    <h1>Note for week 3</h1>
+    <h3>
+        The study materials for this week 
+    </h3>
     <ul>
-        <li>declaration of variable by using “let”, “var”, “const” </li>
-        <li>naming the variable</li>
-        <li>functions ex ”console.log”</li>
-        <li> Control flow: the program will be executed form top to bottom</li>
-        <li>Conditional execution ( we use if keyword)</li>
-        <li>If-else   if- else-if -else</li>
-        <li>While and do loops</li>
-        <li>A do loop is a control structure similar to a while loop</li>
-        <li>For loops</li>
-        <li>Break in loop by using break statement</li>
-        <li>Switch , In some of the cases we can use switch which can more convenient and simple to write our code.</li>
-        <li>Comments  //   /*  */</li>
-        <li>I learned about nested functions</li>
-        <li>The materials about the arrow function was very interesting to me. In this method we use => instead of function keyword. The arrow comes after the list of parameters and is followed by the function’s body</li>
-        <li>When we have one parameter in the main function but when we call it we use multiple parameters, our code doesn’t give us error, but it ignores the extra parameters and use the first one only.</li>
-        <li>Recursive function</li>
-        <li>When we want to represent a collection of the numbers, we use array</li>
-        <li>I learned about he objects and how they could by used in our program</li>
-        <li>I learned about array loops</li>
-        <li>We can read properties like length and toUpperCase from string values. But if you try to add a new property, it doesn’t stick.</li>
-        <li>For a function to accept any number of arguments. For example, Math.max computes the maximum of all the arguments it is given. To write such a function, we put three dots before the function’s last parameter:</li>
+        <li>Object Methods: this</li>
+        <li>Chapter 5: Objects</li>
+        <li>Chapter 6: Document Oject Model</li>
+        <li>Chpater 7:Events</li>
     </ul>
+    
+
+    <h2>Object methods, "this"</h2>
+    <p>
+        To access the object, a method can use the this keyword.<br>
+        The value of this is the object “before dot”, the one used to call the method.<br>
+        Technically, it’s also possible to access the object without this, by referencing it via the outer variable too. <br>
+        but such code is unreliable. if we decide to copy our outer variable to another varialbe. If we do, then it will <br>
+        access the wrong object.<br>
+        In JavaScript, keyword this behaves unlike most other programming languages. It can be used in any function, even if <br>
+        it’s not a method of an object.<br>
+        The value of this is evaluated during the run-time, depending on the context.<br>
+        Arrow function has no "this"<br>
+        Arrow functions are special: they don’t have their “own” this. If we reference this from such a function, it’s taken from the outer “normal” function.<br>
+    </p>
+    <h4>Summary of Chapter 'Object methods, "this"'</h4>
+    <p>The value of this is defined at run-time.</p>
+    <ol>
+        <li>Functions that are stored in object properties are called “methods”.</li>
+        <li>Methods allow objects to “act” like object.doSomething().</li>
+        <li>Methods can reference the object as this.</li>
+        <li>When a function is declared, it may use this, but that this has no value until the function is called.</li>
+        <li>A function can be copied between objects.</li>
+        <li>When a function is called in the “method” syntax: object.method(), the value of this during the call is object.</li>
+    </ol>
+
+    <h2>Chapter 5: Objects</h2>
+    <p>
+        Everything in JavaScript is either one of the six primitive data types (strings, numbers, booleans, symbols, undefined, and null) or an object.<br>
+        In this chapter we study:<br>
+        <ol>
+            
+            <li>Object literals</li>
+            <li>Adding properties to objects</li>
+            <li>Object methods</li>
+            <li>JSON</li>
+            <li>The Math object</li>
+            <li>The Date object</li>
+            <li>The RegExp object</li>
+        </ol>
+        Creating oject:<br>
+        To create an object literal, simply enter a pair of curly braces. <br>
+        It’s also possible to create an object using a constructor function. <br>
+        We can access the properties of an object using the dot notation that we’ve already seen in previous chapters.<br>
+        This will return the value of that property,
+        We can also access an object’s properties using bracket notation ― the property is represented by a string<br>
+        inside square brackets, so needs to be placed inside single or double quotation marks:
+        <uL>
+            <li>Objects are a collection of key-value pairs placed inside curly braces.</li>
+            <li>Objects have properties that can be any JavaScript value. If it’s a function, it’s known as a method.</li>
+            <li>An object’s properties and methods can be accessed using either dot notation or square bracket notation.</li>
+            <li>Objects are mutable, which means their properties and methods can be changed or removed.</li>
+            <li>Objects can be used as parameters to functions, which allows arguments to be entered in any order, or omitted.</li>
+            <li>Nested objects can be created by placing objects inside objects.</li>
+            <li>JSON is a portable data format that uses JavaScript object literals to exchange information.</li>
+            <li>The Math object gives access to a number of mathematical constants.</li>
+            <li>The Math object can be used to perform mathematical calculations.</li>
+            <li>The Date object can be used to create date objects.</li>
+            <li>Once you’ve created a Date object, you can use the getter methods to access information about that date.</li>
+            <li>Once you’ve created a Date object, setter methods can be used to change information about that date.</li>
+            <li>The Regex object can be used to create regular expressions.</li>
+        </uL>
+    </p>
+
+    <h2>Chapter 6: Document Oject Model</h2>
+    <p>
+        The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page<br>
+         by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled.
+         <ul>
+             <li>The Document Object Model is a way of representing a page of HTML as a tree of nodes.</li>
+             <li>The document.getElementById() , document.getElementsByClassName() , document.getElementsByTagNames() and 
+                 document.querySelector() can be used to access elements on a page.</li>
+             <li>The parentNode() , previousSibling() , nextSibling() , childNodes() and children()methods can be used to navigate around the DOM tree.</li>
+             <li>An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute()method.</li>
+             <li>The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.</li>
+             <li>Markup can be added to the page using the appendChild() and insertBefore() methods.</li>
+             <li>Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.</li>
+             <li>The innerHTML property can be used to insert raw HTML directly into the DOM.</li>
+             <li>The CSS properties of an element can be changed by accessing the style property.</li>
+         </ul>
+    </p>
+
+    <h2>Chpater 7:Events</h2>
+    <p>
+        Events are another part of the DOM and they are what provides the link between the web page and user interactions. Every time a user interacts with a web page, such<br>
+        as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to.
+        <ul>
+            <li>Events occur when a user interacts with a web page.</li>
+            <li>An event listener is attached to an element, then invokes a callback function when the event occurs.</li>
+            <li>The event object is passed to the callback function as an argument, and contains lots of properties and methods relating to the event.</li>
+            <li>There are many types of event, including mouse events, keyboard events, and touch events</li>
+            <li>You can remove an event using theremoveEventListenermethod.</li>
+            <li>The default behavior of elements can be prevented using the preventDefault() function</li>
+            <li>Event propagation is the order the events fire on each element.</li>
+            <li>Event delegation is when an event listener is added to a parent element to capture events that happen to its children elements</li>
+        </ul>
+    </p>
     
 </body>
 </html>
