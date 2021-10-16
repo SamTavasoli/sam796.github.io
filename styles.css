@@ -117,8 +117,12 @@ body {
   background-color: rgb(179, 103, 41);
 }
 
-#week3, #week4 {
+#week3, #week4, #week5 {
   background-color: goldenrod;
+}
+
+#h1w5, #h3w5 {
+  text-align: center;
 }
 
 

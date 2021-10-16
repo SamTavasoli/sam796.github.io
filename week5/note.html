@@ -4,36 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week2 note2</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <title>week5 note5</title>
 </head>
-<body>
-    <h1>Note for week 2</h1>
-    <p>
-        All the note have been submitted by using the Microsoft word in I-learn
+<body id="week5">
+    <h1 id="h1w5">Note for week 5</h1>
+    <h3 id="h3w5">Testing and Debugging</h3>
+    <p>Summary of my study in Week 5</p>
+    <ul>
+        <li>I believe testing and debugging is one of the most importnat skill in writng code</li>
+        <li>Debugging is the process of finding out where bugs occur in the code and then dealing with them.</li>
+        <li> In chapter 10, I read and learned about these topics:
+            <ol>
+                <li>Errors, exceptions, and warnings</li>
+                <li>The importance of testing and debugging</li>
+                <li>Strict mode</li>
+                <li>Debugging in the browser</li>
+                <li>Error objects</li>
+                <li>Throwing exceptions</li>
+                <li>Exception handling</li>
+                <li>Testing frameworks</li>
+            </ol>
+        </li>
+    </ul>
+    <h4>Errors</h4>
+    <p>When we encounter with error, it can be because of three reasons:</p>
+    <ol>
+        <li>System error: problem with the system or external devices </li>
+        <li>Programmer error: incorrect syntax or faulty logic</li>
+        <li>User error: the user has entered data incorrectly</li>
+    </ol>
+    <h4>Exceptions</h4>
+    <p>An exception is an error that produces a return value that can then be used by the program to deal with the error.<br>
+    An exception will produce stack trace too.<br>
+    A stack trace will work backwards from the point at which the error occurred to identify the original function or method that started the sequence.<br>
+    In stack trace, we work backwards to see that the error has been caused by what in the first place.  </p>
+    <h4>Warnings</h4>
+    <p>A warning can occur if there’s an error in the code that isn't enough to cause the program to crash.
+       Warnings and exceptions are presented differently in various environments.<br>
+       Some browsers will show a small icon in the corner of the browser window to indicate that an exception or warning has occurred. <br>
+       Others require the console to be open to see any warnings or exceptions.
     </p>
     <ul>
-        <li>declaration of variable by using “let”, “var”, “const” </li>
-        <li>naming the variable</li>
-        <li>functions ex ”console.log”</li>
-        <li> Control flow: the program will be executed form top to bottom</li>
-        <li>Conditional execution ( we use if keyword)</li>
-        <li>If-else   if- else-if -else</li>
-        <li>While and do loops</li>
-        <li>A do loop is a control structure similar to a while loop</li>
-        <li>For loops</li>
-        <li>Break in loop by using break statement</li>
-        <li>Switch , In some of the cases we can use switch which can more convenient and simple to write our code.</li>
-        <li>Comments  //   /*  */</li>
-        <li>I learned about nested functions</li>
-        <li>The materials about the arrow function was very interesting to me. In this method we use => instead of function keyword. The arrow comes after the list of parameters and is followed by the function’s body</li>
-        <li>When we have one parameter in the main function but when we call it we use multiple parameters, our code doesn’t give us error, but it ignores the extra parameters and use the first one only.</li>
-        <li>Recursive function</li>
-        <li>When we want to represent a collection of the numbers, we use array</li>
-        <li>I learned about he objects and how they could by used in our program</li>
-        <li>I learned about array loops</li>
-        <li>We can read properties like length and toUpperCase from string values. But if you try to add a new property, it doesn’t stick.</li>
-        <li>For a function to accept any number of arguments. For example, Math.max computes the maximum of all the arguments it is given. To write such a function, we put three dots before the function’s last parameter:</li>
+        <li>Writing code in strict mode can improve its clarity and speed.<a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/10/k01nwuu2?fromShare=true">use strict</a></li>
+        <li>Placing 'use strict' at the beginning of a file will enforce strict mode on all the JavaScript in the file.</li>
+        <li>In ES6, we don't need to declare 'use strict', it's a self-contained peice by default</li>
+        <li>Linting tools such asJS Lint,JS Hint,andES Lintcan be used to test the quality of JavaScript code, beyond simply using strict mode. </li>
+        <li>Linting tools are also useful for enforcing a programmingstyle guide</li>
+        <li>The recommended way to determine browser support for a feature is to use feature detection.</li>
     </ul>
+
+    <h4>Debugging</h4>
+    <p>
+        <strong>Tusty alert</strong> The most basic form of debugging is to use the alert() method to show a dialog<br>
+        at certain points in the code.
+    </p>
+    <p>
+        <strong>Using Console</strong> Most modern JavaScript environments have aconsoleobject that provides a number of<br>
+         methods for logging information and debugging.
+    </p>
+    <p>
+        Most of the browsers also have a debugging tool that allow us to set breakpoints in our cod ethat will pauseit at certain points.<br>
+        Then we can see the values and modify them.
+    </p>
+    <p>One of the most useful commands is the debugger keyword. This will create a breakpoint in your code that will pause the execution of<br>
+       the code and allow you to see where the program is currently up to. 
+       <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/10/k01nwuv5?fromShare=true">Debugger keyword</a>
+    </p>
+    <p>
+        Erro objects can be created by the host environment when an exception occurs, or it can be created in the code<br>
+        using a constructor function. we have severn more erro objects:
+    </p>
+    <ul>
+        <li>EvalError is not used in the current ECMAScript specification and only retained for backwards compatibility</li>
+        <li>RangeError is thrown when a number is outside an allowable range of values.</li>
+        <li>ReferenceError is thrown when a reference is made to an item that doesn’t exist.</li>
+        <li>SyntaxError</li>
+        <li>TypeError is thrown when there’s an error in the type of value used.</li>
+        <li>URIError is thrown when there’s a problem encoding or decoding the URI</li>
+        <li>InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine.</li>
+    </ul>
+    <h4>Exception Handling</h4>
+    <p>
+        we can use "try", and "catch" to handle the exceptions. The code inside the catch block will only run if an exception<br>
+        is thrown inside the try block. The error object is automatically passed as a parameter to the catch block. This allows<br>
+        us to query the error name, message and stack properties, and deal with it appropriately. In this case, we actually<br>
+        return a string representation of an imaginary number:
+    </p>
+    <h4>Testing</h4>
+    <p>Writing good tests means your code will be less brittle as it develops, and any errors will be identified early on.<br>
+    </p>
+    <ul>
+        <li>Test-driven development(TDD) is the process of writing tests before any actual code.</li>
+        <li>Testing frameworks provide a structure to write meaningful tests and then run them.</li>
+    </ul>
+    <p>What is Jest?<br>
+        Jestis a TDD framework, created by Facebook, that has gained a lot of popularity recently. It makes it easy to createS<br>
+        and run tests by providing helper methods for common test assertions.<br>
+        In order to use Jest, first we need to install it by using:<br>
+        npm install -g jest<br>
+    </p>
+
+
+
+
+
     
 </body>
 </html>
