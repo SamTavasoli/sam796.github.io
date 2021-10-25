@@ -35,11 +35,11 @@ ul {
 }
 
 p{
-  font-family: 'Festive', cursive;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-family: 'Festive', cursive;
+  font-family: Arial, Helvetica, sans-serif;
   color: #333;
   font-size: 3rem;
 }
@@ -136,8 +136,8 @@ h1 {
   border: 0.5px solid #333;
 }
 
-/* #headidng1 {
-  color: orange;
+/* headidng1 {
+  color: rgb(255, 166, 0);
 } */
 
 /* todo-items style ends */
