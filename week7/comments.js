@@ -95,7 +95,6 @@ class CommentModel {
           this.addSubmitListener(q);
         } else {
           // no post name provided, hide comment entry
-          console.log("We are in the no post name era");
           document.querySelector('.addComment').style.display = 'none';
         }
         // get the comments from the model

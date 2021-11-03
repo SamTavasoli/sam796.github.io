@@ -43,7 +43,7 @@ class HikesView {
   }
   renderOneHikeFull(parent, hike) {
     const backButton = document.createElement('button');
-    backButton.innerHTML = '&lt;- All Hikes';
+    backButton.innerHTML = '&lt;- Back';
     const item = document.createElement('li');
     item.innerHTML = ` 
         
