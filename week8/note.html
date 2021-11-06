@@ -1,38 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week2 note2</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <title>week8 note8</title>
 </head>
-<body>
-    <h1>Note for week 2</h1>
+
+<body id="week5">
+    <h1 id="h1w7">Note for week 8</h1>
+    <h3 id="h3w7">Summary of my study in Week 8</h3>
+    <h5>CSS3 Transforms and Transitions</h5>
     <p>
-        All the note have been submitted by using the Microsoft word in I-learn
+        - The CSS3 transform property lets you lets us translate, rotate, scale, and/or skew any element on the page.<br>
+        - Translation functions allow you to move elements left, right, up, or down. These functions are similar to the<br>
+        behavior of position: relative; when declaring top and left, moving elements up and down or left and right<br>
+        along the x and y axes.<br>
+        - The translate(x,y) function moves an element x from the left, and y from the top.<br>
+        - The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one<br>
+        value is provided, it will be used for both the x and y values, growing or shrinking your element or pseudo-element<br>
+        while maintaining the original aspect ratio.<br>
+        - The rotate() function rotates an element around the point of origin by a specified angle value.<br>
+        - The skew(x,y) function specifies a skew along the x and y axes.<br>
+        - The steps to create a simple Transition using only CSS:
+         <ol>
+             <li>Declare the original state of the element in the default style declaration.</li>
+             <li>Declare the final state of your transitioned element; for example, a :hover state.</li>
+             <li>Include the transition functions in your default style declaration using the transition<br>
+                 properties, including: transition-property, transition-duration, transition-timing-function,<br>
+                 and transition-delay. We’ll look at each of these and how they work shortly.</li>
+         </ol>
+         - To support older WebKit browsers, we need to include the -webkit- prefix for all of your transition properties.<br>
+         - The transition-duration property sets how long the transition will take.<br>
+         - If we want to change the color at the same time as changing the rotation and size, we can use multiple transitions.<br>
+         - CSS animations, unlike transitions, allow us to control each step of an animation via keyframes.       
     </p>
+
+    <h5>Canvas, SVG, and Drag and Drop</h5>
+
+    <p>
+        - With HTML5’s Canvas API, we can draw anything we can imagine, all through JavaScript.<br>
+        - The Canvas API is supported
+    </p>
+
+
+    <!-- // /////////////////////////////////////////////////////////////////// // -->
     <ul>
-        <li>declaration of variable by using “let”, “var”, “const” </li>
-        <li>naming the variable</li>
-        <li>functions ex ”console.log”</li>
-        <li> Control flow: the program will be executed form top to bottom</li>
-        <li>Conditional execution ( we use if keyword)</li>
-        <li>If-else   if- else-if -else</li>
-        <li>While and do loops</li>
-        <li>A do loop is a control structure similar to a while loop</li>
-        <li>For loops</li>
-        <li>Break in loop by using break statement</li>
-        <li>Switch , In some of the cases we can use switch which can more convenient and simple to write our code.</li>
-        <li>Comments  //   /*  */</li>
-        <li>I learned about nested functions</li>
-        <li>The materials about the arrow function was very interesting to me. In this method we use => instead of function keyword. The arrow comes after the list of parameters and is followed by the function’s body</li>
-        <li>When we have one parameter in the main function but when we call it we use multiple parameters, our code doesn’t give us error, but it ignores the extra parameters and use the first one only.</li>
-        <li>Recursive function</li>
-        <li>When we want to represent a collection of the numbers, we use array</li>
-        <li>I learned about he objects and how they could by used in our program</li>
-        <li>I learned about array loops</li>
-        <li>We can read properties like length and toUpperCase from string values. But if you try to add a new property, it doesn’t stick.</li>
-        <li>For a function to accept any number of arguments. For example, Math.max computes the maximum of all the arguments it is given. To write such a function, we put three dots before the function’s last parameter:</li>
+        <li>Functions(first-class objects): They can be passed around in the same way as every other value.</li>
+        <li> In chapter 11 and 13, I read and learned about these topics about functions & Ajax
+            <ol>
+                <li>Function properties and methods</li>
+                <li>Immediately Invoked function expressions</li>
+                <li>Self-defining functions</li>
+                <li>Recursive functions</li>
+                <li>Callbacks</li>
+                <li>Promises</li>
+                <li>Async functions</li>
+                <li>Functions that return functions</li>
+                <li>Closures</li>
+                <li>Introduction to functional programming</li>
+                <li>Currying</li>
+                <li>Project ― improve some of the functions using techniques from this chapter</li>
+            </ol>
+        </li>
+    </ul>
+    <h4>Function Properties and Methods</h4>
+    <p>The fact that functions are first-class objects means they can have properties and methods themselves. </p>
+    <h4>Call and Apply Methods</h4>
+    <p>The call() method can be used to set the value of this inside a function to an object that is provided as the
+        first argument.</p>
+    <h4>Immediately Invoked Function Expressions</h4>
+    <p>An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the
+        name suggests<br>
+        , is invoked as soon as it’s defined. This is easily achieved by placing parentheses at the end of the function
+        definition <br>
+        (remember we use parentheses to invoke a function). The function also has to be made into an expression, which
+        is done by placing<br>
+        the whole declaration inside parentheses</p>
+
+    <h4>Temporary variables</h4>
+    <p><a
+            href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/11/k01nwuzy?fromShare=true">Temporary
+            Varialbes example</a></p>
+
+    <h4>Creating Self-contained Code Blocks</h4>
+    <p>An IIFE can be used to enclose a block of code inside its own private scope so it doesn’t interfere with any
+        other part of the program. Using IIFEs<br>
+        in this way means code can be added or removed separately. </p>
+
+    <h4>Function Properties and Methods</h4>
+    <p>The fact that functions rties and methods themselves. </p>
+
+    <h4>Functions that Define and Rewrite Themselves</h4>
+    <p>The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and
+        even redefine itself.<br>
+        This is done by assigning an anonymous function to a variable that has the same name as the function.</p>
+
+    <h4>Recursive Functions</h4>
+    <p>A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool <br>
+        to use when iterative processes are involved. we can this its usage in foctorial of a number</p>
+
+    <h4>Event-driven Asynchronous Programming</h4>
+    <p>Callbacks can be used to facilitate event-driven asynchronous programming. JavaScript is a<br>
+        single-threaded environment, which means only one piece of code will ever be processed at a time.<br>
+        This may seem like a limitation, but non-blocking techniques can be used to ensure that the<br>
+        program continues to run. Instead of waiting for an event to occur, a callback can be created<br>
+        that’s invoked when the event happens. This means that the code is able to run out of order,<br>
+        or asynchronously</p>
+
+    <h4>Creating A Promise</h4>
+    <p>A promise is created using a constructor function. This takes a function called an executor as<br>
+        an argument. The executor initializes the promise and starts the asynchronous operation. It also<br>
+        accepts two functions as arguments: the resolve() function is called if the operation is <br>
+        successful, and the reject() function is called if the operation fails. </p>
+
+    <h4>Chaining Multiple Promises</h4>
+    Promises come into their own when multiple asynchronous tasks are required to be carried out one after<br>
+    the other. If each function that performs an asynchronous operation returns a promise, we can chain the<br>
+    then() methods together to form a sequential piece of code that’s easy to read. Each promise will only<br>
+    begin once the previous promise has been settled.</p>
+
+    <ul>
+        <li>Functions that return other functions are known as higher-order functions.</li>
+        <li>A generator is created by placing an asterisk character (*) after the function keyword.</li>
+        <li>A generator function will return an iterator object that provides a next() method, which returns the<br>
+            next value in a sequence that is defined in the generator function.</li>
+        <li>Pure functions are functions that don't rely on the state of the code they are called from, have no <br>
+            side-effects, and always give the same result when given the same arguments (referential transparency).</li>
+        <li>Currying or partial application is the process of applying one argument at a time to a function.<br>
+            A new function is returned until all the arguments have been used.</li>
+    </ul>
+
+    <h3>Ajax</h3>
+    <p>Ajax is a technique for sending and receiving data asynchronously in the background.</p>
+    <ul>
+        <li>Clients and server</li>
+        <li>A brief history of Ajax</li>
+        <li>Communicating with the server using the Fetch API</li>
+        <li>Receiving data with Ajax</li>
+        <li>Receiving data with Ajax</li>
+        <li>Sending data with Ajax</li>
+        <li>Form data</li>
+        <li>Our project ― obtain questions using Ajax</li>
+    </ul>
+    <p></p>
+
+    <h4>The Fetch API</h4>
+    <p>The Fetch API provides a global fetch() method<br>
+        that only has one mandatory argument, which is the URL of the resource you wish to fetch.
+        <a
+            href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/13/k01nwvlv?fromShare=true">Example</a>
+    </p>
+
+    <h4>Response Interface</h4>
+    <p>The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is
+        fulfilled. Response objects<br>
+        have a number of properties and methods that allow us to process the response effectively.</p>
+
+    <ul>
+        <li>The data normally have beeb send by JSON</li>
+        <li>Ajax can be used for making partial page updates without having to do a full page reload</li>
+        <li>Ajax can be used for communicating with external APIs and can be made by using the Fetch APIs.</li>
+        <li>The Response interface can allows us to control the response received from a request or to create our<br>
+            own response objects and it can allows us to create a request object that contains information about<br>
+            the request being made, such as the URL and headers.</li>
     </ul>
     
 </body>
