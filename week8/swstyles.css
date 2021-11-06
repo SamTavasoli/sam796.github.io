@@ -36,7 +36,7 @@ main {
 }
 
 #shiplist thead {
-  background-color: rgb(228, 171, 16);
+  background-color: darkorange;
 }
 
 #shiplist tr {
@@ -45,10 +45,10 @@ main {
   height: 44px;
 }
 #shiplist tr:nth-child(even) {
-  background-color: rgb(219, 216, 26);
+  background-color: goldenrod;
 }
 #shiplist tr:hover {
-  background-color: rgb(255, 115, 0);
+  background-color: rgb(0, 238, 255);
   text-decoration: underline;
 }
 
@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  background-color: wheat;
+  background-color: gold;
   display: table-cell;
   vertical-align: middle;
 }
@@ -71,5 +71,6 @@ body {
   text-align: center;
   background-color: black;
   color: chartreuse;
+  font-weight: 800;
 }
 
