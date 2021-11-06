@@ -67,3 +67,9 @@ body {
   vertical-align: middle;
 }
 
+#mainHeader {
+  text-align: center;
+  background-color: black;
+  color: chartreuse;
+}
+
