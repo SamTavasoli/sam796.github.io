@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  background-color: gold;
+  background-color: rgb(255, 221, 32);
   display: table-cell;
   vertical-align: middle;
 }
