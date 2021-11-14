@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week2 note2</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <title>week9 note9</title>
 </head>
-<body>
-    <h1>Note for week 2</h1>
+
+<body id="week5">
+    <h1 id="h1w7">Note for week 9</h1>
+    <h3 id="h3w7">Summary of my study in Week 9</h3>
+    <h5>The Window Object</h5>
     <p>
-        All the note have been submitted by using the Microsoft word in I-learn
+        Every JavaScript environment has a global object. Any variables that are created in the global scope<br>
+        are actually properties of this object, and any functions are methods of it. In a browser environment<br>
+        the global object is the window object, which represents the browser window that contains a web page.<br>
+        In this chapter we study about:<br>
+        1- The Browser Object Model<br>
+        2- Finding out browser information<br>
+        3- Browser history<br>
+        4- Controlling windows<br>
+        5- Cookies<br>
+        6- Timing functions<br>
+
+        <ol>
+            <li>The window object is the global object in a browser.</li>
+            <li>Global variables are actually properties of the window object in a browser environment.</li>
+            <li>alert, confirm(), and prompt() are all methods of the window object, and open dialogs that halt the execution of the program.</li>
+            <li>The window.navigator object gives information about the user’s browser and operating system, although it can be unreliable</li>
+            <li>The window.location object provides information about the URL of the current page.</li>
+            <li>The window.history object keeps information about the pages that have been visited in the session.</li>
+            <li>You can open, close, resize, and move windows (although, this doesn’t mean you should!).</li>
+            <li>The window.screen object provides information about the user’s screen.</li>
+            <li>document.write() is an archaic method of writing text to the document and should be avoided.</li>
+            <li>Cookies can be used to store small pieces of information between requests using the document.cookie property.</li>
+            <li>The window.setTimeout() method can be used to invoke a function after a set amount of time. It can be canceled using the clearTimeout() method.</li>
+            <li>The window.setInterval() method can be used to repeatedly invoke a function. It can be stopped using the clearInterval() method.</li>
+            <li>The window.requestAnimationFrame() method can be used to produce smooth and optimized animation by utilizing the browser's built-in graphics<br>
+                 capabilities. It can be canceled using the cancelAnimationFrame() method.</li>
+        </ol>
     </p>
-    <ul>
-        <li>declaration of variable by using “let”, “var”, “const” </li>
-        <li>naming the variable</li>
-        <li>functions ex ”console.log”</li>
-        <li> Control flow: the program will be executed form top to bottom</li>
-        <li>Conditional execution ( we use if keyword)</li>
-        <li>If-else   if- else-if -else</li>
-        <li>While and do loops</li>
-        <li>A do loop is a control structure similar to a while loop</li>
-        <li>For loops</li>
-        <li>Break in loop by using break statement</li>
-        <li>Switch , In some of the cases we can use switch which can more convenient and simple to write our code.</li>
-        <li>Comments  //   /*  */</li>
-        <li>I learned about nested functions</li>
-        <li>The materials about the arrow function was very interesting to me. In this method we use => instead of function keyword. The arrow comes after the list of parameters and is followed by the function’s body</li>
-        <li>When we have one parameter in the main function but when we call it we use multiple parameters, our code doesn’t give us error, but it ignores the extra parameters and use the first one only.</li>
-        <li>Recursive function</li>
-        <li>When we want to represent a collection of the numbers, we use array</li>
-        <li>I learned about he objects and how they could by used in our program</li>
-        <li>I learned about array loops</li>
-        <li>We can read properties like length and toUpperCase from string values. But if you try to add a new property, it doesn’t stick.</li>
-        <li>For a function to accept any number of arguments. For example, Math.max computes the maximum of all the arguments it is given. To write such a function, we put three dots before the function’s last parameter:</li>
-    </ul>
-    
+
+
+    <h5>HTML5 APIs</h5>
+
+    <p>
+        HTML5 is the latest version of the Hypertext Markup Language used to create web pages. The latest iteration is HTML 5.1,<br>
+        which finally became a W3C recommendation in November 2016.<br>
+        <ol>
+            <li>HTML5.1 is the latest incarnation of the Hypertext Markup Language. It covers a variety of technologies,S<br>
+                including several APIs that are accessible using JavaScript.</li>
+            <li>data- attributes help to embed custom data into a web page that can then be used to enhance the user experience with JavaScript.</li>
+            <li>The Web Storage API allows key-value pairs to be stored on the user’s device in a similar way to cookies, but without the same storage restrictions.</li>
+            <li>The Geolocation API allows you to access the geographic coordinates of the user’s device, as long as the user gives permission.</li>
+            <li>The Web Worker API can be used to perform computationally intensive tasks in the background, which helps to avoid websites becoming unresponsive.</li>
+            <li>Websockets are a new protocol for communicating over the internet, and allow real-time, two-way communication.</li>
+            <li>The Notification API allows you to display notifications on the user's system.</li>
+            <li>The <audio> and <video> elements can be employed to embed audio tracks and video clips in a web page. They also have a Media API that can help control<br>
+                the playback using JavaScript.</li>
+            <li>The canvas element can be used to dynamically draw geometric shapes, text, and images on a web page in real-time using JavaScript.</li>
+            <li>A shim or polyfill is a piece of code that adds support of missing features to older browsers.</li>
+
+        </ol>
+    </p>
+
+    <h5>Managing the modern Front-end workflow</h5>
+    <p>
+        <img src="img1.png" alt="Screenshot og executed code" width="60%">
+        <a
+            href="img1.png">Screenshot
+        </a>
+    </p>
+
+
 </body>
 </html>
