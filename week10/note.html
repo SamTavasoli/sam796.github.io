@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week2 note2</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <title>week10 note10</title>
 </head>
-<body>
-    <h1>Note for week 2</h1>
+
+<body id="week5">
+    <h1 id="h1w7">Note for week 10</h1>
+    <h3 id="h3w7">Summary of my study in Week 10</h3>
+    <h5>Validating forms</h5>
     <p>
-        All the note have been submitted by using the Microsoft word in I-learn
+        This is called form validation. When you enter data, the browser and/or the web server will check to see that the<br>
+        data is in the correct format and within the constraints set by the application. Validation done in the browser is<br>
+        called client-side validation, while validation done on the server is called server-side validation. In this chapter<br>
+        we are focusing on client-side validation.<br>
+        We want to make filling out web forms as easy as possible. So why do we insist on validating our forms? There are three main reasons:<br>
+        1- We want to get the right data, in the right format.<br>
+        2- We want to protect our users' data.<br>
+        3- We want to protect ourselves.<br><br>
+        We have two different types of client-side validation:
+        <ol>
+            <li>Built-in form validation</li>
+            <li>JavaScript</li>
+        </ol>
+
+        There are some materials we read about validation and attributes in this chapter:
+        <ol>
+            <li>The required attribute</li>
+            <li>Validating against a regular expression</li>
+            <li>Constraining the length of your entries</li>
+            <li>Constraining the values of your entries</li>
+        </ol>
+
+        Validation of form using JavaScript:
+        <ul>
+            <li>The Constraint Validation API</li>
+
+        </ul>
+
+        Customizing error messages is one of the most common use cases of the constraint validation API.<br>
+        To validate a form withouta built in API, we can ask following questions:
+        <ul>
+            <li>What kind of validation should I perform?</li>
+            <li>What should I do if the form doesn't validate?</li>
+            <li>How can I help the user to correct invalid data?</li>
+        </ul>
+
+        Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages,<br>
+         but it always requires you to think carefully about the user. Always remember to help your users correct the<br>
+          data they provide. To that end, be sure to:<br>
+          <ul>
+              <li>Display explicit error messages.</li>
+              <li>Be permissive about the input format.</li>
+              <li>Point out exactly where the error occurs, especially on large forms.</li>
+          </ul>
+
     </p>
-    <ul>
-        <li>declaration of variable by using “let”, “var”, “const” </li>
-        <li>naming the variable</li>
-        <li>functions ex ”console.log”</li>
-        <li> Control flow: the program will be executed form top to bottom</li>
-        <li>Conditional execution ( we use if keyword)</li>
-        <li>If-else   if- else-if -else</li>
-        <li>While and do loops</li>
-        <li>A do loop is a control structure similar to a while loop</li>
-        <li>For loops</li>
-        <li>Break in loop by using break statement</li>
-        <li>Switch , In some of the cases we can use switch which can more convenient and simple to write our code.</li>
-        <li>Comments  //   /*  */</li>
-        <li>I learned about nested functions</li>
-        <li>The materials about the arrow function was very interesting to me. In this method we use => instead of function keyword. The arrow comes after the list of parameters and is followed by the function’s body</li>
-        <li>When we have one parameter in the main function but when we call it we use multiple parameters, our code doesn’t give us error, but it ignores the extra parameters and use the first one only.</li>
-        <li>Recursive function</li>
-        <li>When we want to represent a collection of the numbers, we use array</li>
-        <li>I learned about he objects and how they could by used in our program</li>
-        <li>I learned about array loops</li>
-        <li>We can read properties like length and toUpperCase from string values. But if you try to add a new property, it doesn’t stick.</li>
-        <li>For a function to accept any number of arguments. For example, Math.max computes the maximum of all the arguments it is given. To write such a function, we put three dots before the function’s last parameter:</li>
-    </ul>
-    
+
+
+    <h5>Using Fetch</h5>
+
+    <p>
+        The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as<br>
+        requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch<br>
+        resources asynchronously across the network.<br>
+        We used to had XMLHttpRequest but now we use Fetch which provids a better alternative.<br>
+        The fetch specification differs from jQuery.ajax() in the following significant ways:
+        <ol>
+            <li>The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the ok property of the response set to false if the response isn’t in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.</li>
+            <li>fetch() won’t send cross-origin cookies unless you set the credentials init option. (Since April 2018. The spec changed the default credentials policy to same-origin. Firefox changed since 61.0b13.)</li>
+        </ol>
+        The Headers interfaces allows us to create our own headers object via the Headers() constructor. A headers object is <br>
+        a  simple multi-map on names to values.
+    </p>
+
+
+
 </body>
 </html>
