@@ -1,0 +1,61 @@
+body {
+    font-size: 20px;
+    background-color: gold;
+    /* background-image: linear-gradient (white green); */
+    background-size: cover;
+  }
+
+ h1 {
+     color: orange;
+     background-color: black;
+     text-align: center;
+     margin: auto;
+     /* padding: 1%; */
+     max-width: 60%;
+ }
+
+ ul #quakeList {
+     color: chartreuse;
+     background-color: black;
+ }
+
+ #content {
+     color: chartreuse;
+     background-color: black;
+     padding: 1%;
+     margin-top: 1cm;;
+ }
+
+ a {
+     color: aqua;
+     font-weight: 900;
+     font-size: x-large;
+     background-color: black;
+     text-align: center;
+     margin: auto;
+     
+ }
+
+ a:hover {
+    background-color: mintcream;
+    color: cyan;
+  }
+
+  a:link {
+    color: aqua;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: mediumslateblue;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: magenta;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
