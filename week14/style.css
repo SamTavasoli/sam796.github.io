@@ -1,0 +1,269 @@
+/* Main Style*/
+html,
+body {
+  display: block;
+  background-color: goldenrod;
+  background-image: linear-gradient(to right, black, black, black, red, red, black, red, black, red, red, black, black, black);
+  background-image: linear-gradient(to right, red, black);
+  /* background-image: linear-gradient(to right, goldenrod, goldenrod, goldenrod, yellow, yellow, goldenrod, yellow, goldenrod, yellow, yellow, goldenrod, goldenrod, goldenrod); */
+  /* background-image: linear-gradient(to right, black, goldenrod, yellow, gold, red, black); */
+  /* border: 10px solid rgb(179, 136, 18); */
+  /* position: relative; */
+  border-radius: 25px;
+  margin: auto;
+}
+
+.content {
+  max-width: 55%;
+  margin: auto;
+  padding: 10px;
+  background-color: gold;
+}
+
+.content {
+  border: 0.5rem outset black;
+  outline: 0.5rem solid khaki;
+  box-shadow: 0 0 0 1rem lightsalmon;
+  border-radius: 12px;
+  font: bold 1rem sans-serif;
+  margin: 2rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+  margin: auto;
+  margin-top: 1cm;
+  text-align: center;
+  animation: 10000ms ease-in-out infinite color-change;
+}
+
+h1 {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 300%;
+  color: rgb(51, 31, 21);
+  text-shadow: 3px 3px #ff07ff;
+  /* background-color: rgba(255, 187, 2, 0.472); */
+}
+
+h1::first-letter {
+  font-size: 150%;
+  color: rgb(0, 0, 0);
+}
+
+#fPar::first-letter {
+  font-size: 200%;
+  color: rgb(0, 0, 0);
+}
+
+#submit {
+  background-color: rgb(0, 0, 0);
+  color: rgb(60, 255, 0);
+}
+
+span {
+  color: rgb(1, 255, 14);
+  text-shadow: 1.5px 1.5px .5px #000000;
+}
+
+input#mtitle {
+  width: 296px;
+}
+
+/* body {
+    animation: 10000ms ease-in-out infinite color-change;
+  } */
+
+@keyframes color-change {
+  0% {
+    background-color: rgb(255, 0, 123);
+  }
+  40% {
+    background-color: rgb(188, 139, 252);
+  }
+  20% {
+    background-color: rgb(255, 217, 1);
+  }
+  40% {
+    background-color: rgb(250, 105, 160);
+  }
+  60% {
+    background-color: rgb(255, 124, 255);
+  }
+  80% {
+    background-color: rgb(118, 250, 118);
+  }
+  100% {
+    background-color: rgb(255, 251, 3);
+  }
+  100% {
+    background-color: rgb(3, 243, 252);
+  }
+  40% {
+    background-color: rgb(188, 139, 252);
+  }
+  0% {
+    background-color: rgb(255, 97, 173);
+  }
+  20% {
+    background-color: rgb(255, 218, 5);
+  }
+  40% {
+    background-color: rgb(208, 154, 253);
+  }
+  60% {
+    background-color: rgb(4, 253, 232);
+  }
+  80% {
+    background-color: rgb(97, 252, 97);
+  }
+  100% {
+    background-color: rgb(139, 255, 255);
+  }
+  100% {
+    background-color: rgb(252, 106, 106);
+  }
+  20% {
+    background-color: rgb(255, 1, 170);
+  }
+  40% {
+    background-color: rgb(188, 139, 252);
+  }
+  60% {
+    background-color: rgb(235, 164, 253);
+  }
+  80% {
+    background-color: rgb(239, 118, 250);
+  }
+  100% {
+    background-color: rgb(243, 118, 212);
+  }
+  100% {
+    background-color: rgb(248, 155, 68);
+  }
+  0% {
+    background-color: rgb(250, 195, 77);
+  }
+  20% {
+    background-color: rgb(255, 218, 5);
+  }
+  40% {
+    background-color: rgb(220, 190, 245);
+  }
+  60% {
+    background-color: rgb(178, 248, 131);
+  }
+  80% {
+    background-color: rgb(97, 252, 131);
+  }
+  40% {
+    background-color: rgb(188, 139, 252);
+  }
+  100% {
+    background-color: rgb(139, 255, 187);
+  }
+  100% {
+    background-color: rgb(106, 206, 252);
+  }
+  40% {
+    background-color: rgb(188, 139, 252);
+  }
+}
+
+#submit {
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+  margin-left: 0.2cm;
+}
+
+#submit:hover {
+  transform: scale(
+    2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  /* background-color: magenta; */
+  color: rgb(255, 94, 0);
+}
+
+#mtitle:hover {
+  transform: scale(
+    1.8
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background-color: rgb(253, 253, 253);
+  color: rgb(110, 0, 253);
+  font-family: Arial, Helvetica, sans-serif;
+  /* ds */
+}
+
+/* #headerAnimation { */
+h1 {
+  width: auto;
+  height: 100px;
+  /* background-color: rgb(255, 145, 0); */
+  position: relative;
+  animation: myfirst 60s linear 1s infinite alternate;
+}
+
+.poster{
+  max-height: 400px;
+  max-width: 800px;
+}
+
+@keyframes myfirst {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: -200px;
+    top: 0px;
+  }
+  50% {
+    left: 200px;
+    top: 0px;
+  }
+  75% {
+    left: -200px;
+    top: 0px;
+  }
+  100% {
+    left: 200px;
+    top: 0px;
+  }
+}
+
+
+#imdbLogo {
+  position: relative;
+  width: 30px; 
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  align-items: middle;
+  float: none;
+  margin: 10px 10px -10px 10px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+.placeholder {
+  background-color: olive;
+  color: black;
+  text-shadow: 1.5px 1.5px .5px chartreuse;
+  font-weight: bolder;
+  background-image: linear-gradient(to right, black, goldenrod, yellow, gold, red, black);
+  /* background-image: linear-gradient(to right, red, red, black, red, black, black, red, red, black, red, black, red, red, black, black, black); */
+  border: 5px solid rgb(255, 255, 255);
+  padding: 20px;
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 30px;
+  text-shadow: 1px 1px 3px #000000;
+  color: rgb(255, 255, 255);
+}
+
+#dataResults {
+  background-color: goldenrod;
+  max-width: 500px;
+  align-items: center;
+  margin: auto;
+}
+

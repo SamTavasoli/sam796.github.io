@@ -5,60 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Final Project - Front end development</title>
 </head>
 
 <body>
 
-    <input type="text" id="userInput" name="textField">
-    <button id="but1" onclick="readContent()">Click Me</button>
-    <input type="button" onclick="addNumber()" id="check" name="checkbox" value="+">
-    <input type="button" onclick="subtract()" id="check" name="checkbox" value="-">
-    <input type="button" onclick="multiply()" id="check" name="checkbox" value="*">
-    <input type="button" onclick="division()" id="check" name="checkbox" value="/">
-    <div id="div1">
+    <div class="content">
+
+        <div id="headerAnimation">
+            <h1>Find My Movie! </h1>
+        </div>
+        <p id="fPar">
+            Are you looking for a movie, but you only have some part of the title?
+            You only need to enter a part of the title
+            and see the results for the movie with that keyword. Enter the keywords in
+            the text area and then click on the button <span>"Find Move"</span> to see the results. Then if you 
+            click on the name of the movie, you can see all the information about that movie
+            on the  <img src="imdb.jpg" alt="IMDB logo" id="imdbLogo"> website.
+
+        </p>
+        <br>
+
+        <div class="searchDiv">
+            <form id="movieFinder">
+                <input type="text" name="mtitle" id="mtitle" placeholder="Type here..."">
+            </form><br>
+            <button id="submit">Find Movie</button>
+        </div>
+
+        <div id="resultSection">
+            <h3>Search Results of Relevant Movie</h3>
+            <div id="dataResults">
+                <p class="placeholder">
+                     The search results...   
+                </p>
+            </div>
+        </div>
 
     </div>
 
-
 </body>
-<script>
-    var inputList = [];
-    function addNumber() {
-        let result = inputList.reduce((a, b) => a + b, 0);
-        document.getElementById("div1").innerHTML = result;
-    
-    }
-
-    function readContent() {
-        let userInput = document.getElementById("userInput").value;
-        if (isNumeric(userInput)) {
-            let userContent = getNumber(parseInt(userInput));
-            inputList.push(parseInt(userInput));
-            document.getElementById("div1").innerHTML = userContent;
-        }
-        else {
-            alert("it's not a valid input");
-        }
-    }
-
-    function getNumber(number) {
-        let sum = 0;
-        for (let i = 1; i <= number; i++) {
-            sum += i
-        }
 
 
-        return sum;
-
-    }
-
-    function isNumeric(str) {
-        if (typeof str != "string") return false // we only process strings!  
-        return !isNaN(str) &&
-            // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-            !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
-    }
-</script>
+<script src="./custom.js"></script>
 
 </html>
