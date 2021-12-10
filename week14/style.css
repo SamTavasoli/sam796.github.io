@@ -245,13 +245,14 @@ h1 {
 .placeholder {
   background-color: olive;
   color: black;
-  text-shadow: 1.5px 1.5px .5px chartreuse;
+  /* text-shadow: 1.5px 1.5px .5px chartreuse; */
   font-weight: bolder;
   background-image: linear-gradient(to right, black, goldenrod, yellow, gold, red, black);
   /* background-image: linear-gradient(to right, red, red, black, red, black, black, red, red, black, red, black, red, red, black, black, black); */
   border: 5px solid rgb(255, 255, 255);
   padding: 20px;
   font-size: 25px;
+  text-shadow: 0 0 5px #FF0000;
 }
 
 h3 {
