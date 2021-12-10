@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Final Project - Front end development</title>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div id="headerAnimation">
+            <h1>Find My Movie! </h1>
+        </div>
+        <p>
+            Are you looking for a movie, but you only have some part of the title?
+            You only need to enter a part of the title
+            and see the results for the movie with that keyword. Enter the keywords in
+            the text area and then click on "Find Move" to see the results.
+        </p>
+
+        <div class="searchDiv">
+            <input type="text" id="title">
+            <button onclick="findMovie();" class="btSearch">Find Movie</button>
+        </div>
+
+        <div id="resultSection">
+            <h3>Search Results of Relevant Movies</h3>
+            <div id="dataResults">
+                <p class="title">[ This section will be updated when a search is made... ]</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script src="./custom.js"></script>
+<script>
+    fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "imdb8.p.rapidapi.com",
+                "x-rapidapi-key": "7883562fbbmshac7d0cf1cb5f607p1ead55jsn0d8d6f80635f"
+            }
+        })
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+</script>
+
+</html>
