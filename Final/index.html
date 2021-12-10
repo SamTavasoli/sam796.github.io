@@ -27,14 +27,16 @@
         </p>
 
         <div class="searchDiv">
-            <input type="text" id="title">
-            <button onclick="findMovie();" class="btSearch">Find Movie</button>
+            <form id="movieFinder">
+                <input type="text" name="mtitle" id="mtitle">
+            </form>
+            <button id="submit">Find Movie</button>
         </div>
 
         <div id="resultSection">
             <h3>Search Results of Relevant Movies</h3>
             <div id="dataResults">
-                <p class="title">[ This section will be updated when a search is made... ]</p>
+                <p class="placeholder">[ This section will be updated when a search is made... ]</p>
             </div>
         </div>
 
@@ -44,20 +46,5 @@
 
 
 <script src="./custom.js"></script>
-<script>
-    fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr", {
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "imdb8.p.rapidapi.com",
-                "x-rapidapi-key": "7883562fbbmshac7d0cf1cb5f607p1ead55jsn0d8d6f80635f"
-            }
-        })
-        .then(response => {
-            console.log(response);
-        })
-        .catch(err => {
-            console.error(err);
-        });
-</script>
 
 </html>

@@ -1,58 +1,71 @@
-$(document).ready(function(){
-    fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "imdb8.p.rapidapi.com",
-            "x-rapidapi-key": "7883562fbbmshac7d0cf1cb5f607p1ead55jsn0d8d6f80635f"
-        }
-    })
-    .then(response => {
-        console.log(response);
-    })
-    .catch(err => {
-        console.error(err);
-    })
+$("#submit").click(function (e) {
+    $("#movieFinder").submit();
+
+})
+
+$("#movieFinder").submit(function (e) {
+    findMovie();
+    e.preventDefault();
 })
 
 
-// saman code ///////////////////////////////////////////////////////////////////////////////////
+function findMovie() {
+    // Get the value from the search box
+    var searchTitle = $("#mtitle").val();
+    if (searchTitle == ""){
+        alert("Please enter a key word");
+        return;
+    }
+    console.log("Searching for: " + searchTitle);
 
-// function findMovie() {
-// 	// Get the value from the search box
-// 	var searchTitle = $("#title").val();
-// 	console.log("Searching for: " + searchTitle);
+    // Set up the parameters to send to the API
+    var url = "https://imdb8.p.rapidapi.com/auto-complete?q=";
+    url = url + encodeURIComponent(searchTitle);
+    console.log(url);
+    // Use jQuery to make the get request
+    fetch(url, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "imdb8.p.rapidapi.com",
+                "x-rapidapi-key": "f78ab6d24bmsh3c21503da7024bep14e1cbjsn0fc977b52e64"
+            }
+        })
+        .then(response => {
+            var data = response.json()
+            console.log(data);
+            data.then(
+                function (value) {
+                    console.log(value);
+                    updateResults(value);
+                },
+                function (error) {
+                    alert("error: " + error)
+                }
+            )
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
 
-// 	// Set up the parameters to send to the API
-// 	var params = {s: searchTitle, apikey:"7883562fbbmshac7d0cf1cb5f607p1ead55jsn0d8d6f80635f"};
+function updateResults(data) {
+    console.log("data: " + JSON.stringify(data.d))
+    if (data.d && data.d.length > 0) {
+        var resultList = $("#dataResults");
+        resultList.empty();
 
-// 	// Use jQuery to make the get request
-// 	$.get("https://rapidapi.com/apidojo/api/imdb8/", params, function(data, status){
-// 		// For debugging purposes, make a note that we're back
-// 		console.log("Results from API:")
-// 		console.log(status);
-//     	console.log(data);
+        for (var i = 0; i < data.d.length; i++) {
+            var title = data.d[i].l;
+            var poster = data.d[i].i.imageUrl;
+            var imdbID = data.d[i].id;
+            resultList.append("<div class='title imgContainer'><a href='http://www.imdb.com/title/" + imdbID +
+                "' target='_blank'/'><img class='poster' src='" + poster + "' alt='" + title +
+                "'><div class='transparentShield'><p class='titleText'>" + title + "</p></div></a></div>");
+        }
+    } else {
+        var resultList = $("#dataResults");
+        resultList.empty();
+        resultList.append("<p class='title warning'>>Please check your title and resubmit your inquery</p>");
+    }
 
-//     	updateResults(data)
-// 	});
-// }
-
-// function updateResults(data) {
-
-// 	if (data.Search && data.Search.length > 0) {
-// 		var resultList = $("#dataResults");
-// 		resultList.empty();
-
-// 		for (var i = 0; i < data.Search.length; i++) {
-// 			var title = data.Search[i].Title;
-// 			var poster = data.Search[i].Poster;
-// 			var imdbID = data.Search[i].imdbID;
-// 			resultList.append("<div class='title imgContainer'><a href='http://www.imdb.com/title/" + imdbID
-//  + "' target='_blank'/'><img class='poster' src='" + poster + "' alt='" + title + "'><div class='transparentShield'><p class='titleText'>" + title + "</p></div></a></div>");
-// 		} 
-// 	} else {
-// 			var resultList = $("#dataResults");
-// 			resultList.empty();
-// 			resultList.append("<p class='title warning'>>Please check your title and resubmit your inquery</p>");
-// 		}
-
-// }
+}

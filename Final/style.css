@@ -141,6 +141,11 @@ h1 {
   animation: myfirst 60s linear 1s infinite alternate;
 }
 
+.poster{
+  max-height: 400px;
+  max-width: 800px;
+}
+
 @keyframes myfirst {
   0% {
     left: 0px;
