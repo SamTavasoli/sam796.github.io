@@ -40,13 +40,14 @@ h1 {
   font-family: fantasy;
   font-size: 300%;
   color: rgb(51, 31, 21);
-  text-shadow: 3px 3px #ff07ff;
+  text-shadow: 3px 3px 2px #ff07ff;
   /* background-color: rgba(255, 187, 2, 0.472); */
 }
 
 h1::first-letter {
   font-size: 150%;
   color: rgb(0, 0, 0);
+
 }
 
 #fPar::first-letter {
@@ -172,6 +173,8 @@ input#mtitle {
   transition: transform 0.2s; /* Animation */
   margin: 0 auto;
   margin-left: 0.2cm;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  font-size: larger;
 }
 
 #submit:hover {
@@ -180,6 +183,11 @@ input#mtitle {
   ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   /* background-color: magenta; */
   color: rgb(255, 94, 0);
+}
+
+#mtitle {
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  font-size: larger;
 }
 
 #mtitle:hover {
