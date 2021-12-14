@@ -18,11 +18,11 @@ function findMovie() {
     }
     console.log("Searching for: " + searchTitle);
 
-    // Set up the parameters to send to the API
+    // Setting the parameters and sending to the API
     var url = "https://imdb8.p.rapidapi.com/auto-complete?q=";
     url = url + encodeURIComponent(searchTitle);
     console.log(url);
-    // Use jQuery to make the get request
+    // Get request
     fetch(url, {
             "method": "GET",
             "headers": {
